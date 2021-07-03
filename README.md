@@ -1,4 +1,4 @@
-# React Cheat Sheet (ไทย)
+# React Cheat Sheet
 
 ## Functional Component
 

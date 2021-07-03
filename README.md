@@ -47,4 +47,9 @@ setCount((prev) => prev + 1); // 1
 
 ข้อควรระวัง
 
-- `useState` ค่า value ที่ออกมาจะมีสถานะที่เป็น stale state
+- `useState` ค่า value ที่ออกมาจะมีสถานะที่เป็น `stale state`
+- ทุกทั้งที่ call setter function จะทำให้ component re-render
+
+refs
+
+- [stale state](https://css-tricks.com/dealing-with-stale-props-and-states-in-reacts-functional-components/)

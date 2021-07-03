@@ -1,5 +1,17 @@
 # React Cheat Sheet (ไทย)
 
+## Functional Component
+
+เป็น function ที่ return ตัว jsx ออกมา​ซึ่งสามารถมี state เป็นของตัวเองได้(react version >= 16.8)
+
+```jsx
+function App() {
+  return <div>hello react</div>;
+}
+
+const App = () => <div>hello react</div>;
+```
+
 ## useState
 
 `useState` คือ hook ของ react ที่เอาไว้ใช้ในประกาศ state ของ ตัว component ซึ่งสามารถใส่ค่า default ลงไปได้และ type ยังสามารถ inferred จากตัว default ได้อีก

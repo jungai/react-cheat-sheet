@@ -14,6 +14,62 @@ function App() {
 const App = () => <div>hello react</div>;
 ```
 
+## Jsx
+
+`jsx` คือ syntax ที่เราสามารถเขียน `html` ไปในตัว javascript ได้
+
+```jsx
+const something = <h1>hello</h1>;
+const something2 = () => <h1>hello</h1>;
+```
+
+โดยที่ใน html เราสามารถใช้ javascript เข้าไปได้โดยใช้ `brackets` หรือก็คือ `{}`
+
+1. display variable
+
+```jsx
+const name = "Junior";
+
+const Title = <h1> Hello {name}</h1>;
+
+const App = () => <div>{Title}</div>;
+```
+
+2. conditional rendering
+
+```jsx
+const alwaysTrue = true;
+
+const Title = <div>{alwaysTrue ? <h1>IU ❤️</h1> : <h1>Junior</h1>}</div>;
+
+const App = () => {
+  return (
+    <div>
+      {Title}
+      { alwaysTrue ? 'can display string' : null }
+      { alwaysTrue && <p>display this</p>}
+    <div>
+  )
+}
+```
+
+3. looping
+
+```jsx
+const myList = ["iu", "rose", "twice"];
+
+const App = () => (
+  <div>
+    {myList.map((name, index) => (
+      // จำเป็นต้องใส่ key
+      <p key={`${index}${name}`}>{name}</p>
+    ))}
+  </div>
+);
+```
+
+> การ loop จำเป็นต้องใส่ attribute `key` (เพื่อเป็นการบอกว่า element อันนัั้นมี unique key อะไร)
+
 ## useState
 
 `useState` คือ hook ของ react ที่เอาไว้ประกาศ state ของ ตัว component ซึ่งสามารถใส่ค่า default ลงไปได้และ type ยังสามารถ inferred จากตัว default ได้อีก

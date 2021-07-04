@@ -53,7 +53,7 @@ const App = () => {
 }
 ```
 
-3. looping
+3. looping หรือ list
 
 ```jsx
 const myList = ["iu", "rose", "twice"];

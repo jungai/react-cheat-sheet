@@ -257,7 +257,7 @@ both => 0 iu
 no1 is iu
 count => 1
 both => 1 iu
-myLove => secret
+myLove => secret ❤️
 both => 1 secret
 ```
 

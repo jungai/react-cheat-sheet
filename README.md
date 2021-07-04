@@ -231,3 +231,26 @@ both => 1 secret
 ```
 
 > tips เราสามารถใส่ ค่า dependencies array ได้มากกว่า 1 ค่า e.g. `[myLove, count]`
+
+## Event
+
+การ handle event ใน react เราจะใช้ prefix `on` e.g. `onClick`, `onChange`, `onKeyup` ใน html tag
+
+```jsx
+const handleOnKeyUp = () => {};
+
+<input value="" onChange={() => {}} onKeyup={handleOnKeyUp}/>
+
+<button
+  onClick={() => {
+    console.log("is click");
+  }}
+>
+  click me
+</button>
+```
+
+refs
+
+- [handle event](https://reactjs.org/docs/handling-events.html)
+- [events](https://reactjs.org/docs/events.html)

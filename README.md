@@ -70,6 +70,37 @@ const App = () => (
 
 > การ loop จำเป็นต้องใส่ attribute `key` (เพื่อเป็นการบอกว่า element อันนัั้นมี unique key อะไร)
 
+## Style in react
+
+1. css in js
+
+```jsx
+<div style={{ display: "flex", backgroundColor: "tomato" }}>
+  <h1 style={{ color: "white" }}>Junior</h1>
+</div>
+```
+
+> `css in js` จะเขียนที่อยู่ในรูปแบบ `object` ซึ่ง keyจะเป็น `camelCase` แล้ว value เป็น string
+
+2. css file
+
+```jsx
+// style.css
+.title {
+  color: tomato;
+}
+
+// index.jsx
+import './style.css'
+
+const App = () => (
+  <div>
+    <h1 className="title">Junior</h1>
+  </div>
+```
+
+> ใน html เราจะใช้ `class` ในการใช้ css แต่ใน react `class` เป็น `reserved word` เราจะใช้เป็น `className` แทน
+
 ## useState
 
 `useState` คือ hook ของ react ที่เอาไว้ประกาศ state ของ ตัว component ซึ่งสามารถใส่ค่า default ลงไปได้และ type ยังสามารถ inferred จากตัว default ได้อีก

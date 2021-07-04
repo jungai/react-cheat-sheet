@@ -285,3 +285,55 @@ refs
 
 - [handle event](https://reactjs.org/docs/handling-events.html)
 - [events](https://reactjs.org/docs/events.html)
+
+## Component
+
+เนื่องจาก react design มาเป็น component based เราสามารถมององค์ประกอบของเว็บเป็นส่วนๆเล็กมาประกอบกันหรือเรียกส่วนเล็กๆเหล่านั้นเป็น `component`
+
+นอกจากนี้เราสามารถส่งค่าผ่าน component ได้่โดยเรียกค่าพวกนี้ว่า property หรือ `props` ​โดย props สามารถเป็นได้หลายค่าด้วยเช่นกัน e.g. `string`, `number`, `object`, `component` , etc
+
+```jsx
+// Header.jsx
+const Header = (props) => <header>{props.title}</header>;
+
+export default Header;
+
+// App.jsx
+import Header from "./Header.jsx";
+
+const App = () => (
+  <div>
+    <Header title="this is title" />
+  </div>
+);
+```
+
+or typescript
+
+```tsx
+// Header.tsx
+interface HeaderProps = {
+  title: string
+}
+
+const Header = (props: HeaderProps) => <header>{props.title}</header>;
+
+export default Header;
+
+// App.tsx
+import Header from "./Header.tsx";
+
+const App = () => {
+  const [title, setTitle] = useState("this is title")
+
+  return (
+    <div>
+      // error Header Component is required props title type of string
+      <Header />
+
+      <Header title="this is title"/>
+      <Header title={title}/>
+    </div>
+  )
+}
+```

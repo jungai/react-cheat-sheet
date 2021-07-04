@@ -1,3 +1,5 @@
+# 🪜 สถานะ : ปรับปรุง
+
 # React Cheat Sheet
 
 ## Functional Component
